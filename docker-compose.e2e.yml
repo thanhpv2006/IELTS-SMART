@@ -1,0 +1,238 @@
+# docker-compose.e2e.yml — "real stack" E2E infra for ielts-smart-web.
+#
+# Strategy: run the REAL backend (api + worker + postgres + minio), fake ONLY
+# the two external paid services — SpeechSuper (via ss-proxy) and OpenAI.
+# The Next.js web app runs OUTSIDE this compose (next start on host :3004).
+#
+# Ports / env / accounts are pinned by tests/E2E-CONTRACT.md.
+# Bring up + seed via tests/e2e-up.sh; tear down via tests/e2e-down.sh.
+#
+# Location note: this file lives in ielts-smart-web/. The Go backend is a SIBLING
+# repo (../ielts-smart-backend); the fakes live in this repo (./tests/fakes).
+#
+# ── MinIO presign cross-host note (read before touching STORAGE_* env) ───────
+# minio-go signs presigned URLs against STORAGE_PUBLIC_URL's host (SigV4 signs
+# Host). STORAGE_PUBLIC_URL=http://localhost:9110 is identical for the browser
+# (host) and for any container, so signatures always match. STORAGE_ENDPOINT=
+# http://minio:9000 is the in-network host used for server-side Get/Put/Stat.
+#
+# In the SCORING_VIA_SSPROXY=true path used here, NO container actually fetches
+# localhost:9110: the worker fetches student audio by OBJECT KEY via the core
+# client (minio:9000, internal), then hands a presigned localhost:9110 GET URL
+# to fake-ssproxy — which only echoes it back, never fetches. The browser PUT
+# to localhost:9110 is the one real cross-host signed op and works because the
+# signed host == the host the browser hits. We still add
+# extra_hosts: ["localhost:host-gateway"] to worker (and fake-ssproxy) as
+# defense-in-depth so any future code path that DOES fetch localhost:9110 from
+# inside a container can reach the host-published port.
+
+name: ielts88-e2e
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ielts88
+      POSTGRES_PASSWORD: ielts88
+      POSTGRES_DB: ielts88
+    ports:
+      - "55432:5432"        # host 55432 to avoid clashing with infra-postgres-1 on 5432
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ielts88 -d ielts88"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    tmpfs:
+      - /var/lib/postgresql/data   # ephemeral: no named volume, wiped on down
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports:
+      - "9110:9000"         # API  (host 9110 == STORAGE_PUBLIC_URL host)
+      - "9111:9001"         # console
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9000/minio/health/live || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    tmpfs:
+      - /data               # ephemeral
+
+  minio-init:
+    image: minio/mc:latest
+    depends_on:
+      minio:
+        condition: service_healthy
+    # Create the bucket and make GET public/anonymous on the audio prefix so a
+    # plain (unsigned) GET of audio/* works too — harmless for the test bucket.
+    # List+literal-block form (the folded `>` string entrypoint was unreliable —
+    # mc never ran, leaving the bucket missing).
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        mc alias set local http://minio:9000 minioadmin minioadmin &&
+        mc mb --ignore-existing local/ielts88 &&
+        mc anonymous set download local/ielts88 &&
+        echo 'e2e bucket ready'
+    restart: "no"
+
+  migrate:
+    build:
+      context: ../ielts-smart-backend
+      dockerfile: Dockerfile
+      target: api          # api image bundles both /usr/local/bin/migrate and /db
+    entrypoint: ["/usr/local/bin/migrate", "up"]
+    environment:
+      DATABASE_URL: postgres://ielts88:ielts88@postgres:5432/ielts88?sslmode=disable
+      JWT_SECRET: test-secret-e2e        # required by config.Load()
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"          # one-shot
+
+  # Deterministic seed: reuses identity/partner/bank/assignment app services so
+  # bcrypt hashes are produced exactly like production (cost 12). Runs from the
+  # api Dockerfile `build` stage (full source + warm go-mod cache) via `go run`.
+  seed:
+    build:
+      context: ../ielts-smart-backend
+      dockerfile: Dockerfile
+      target: build        # golang:1.26-alpine stage: has source at /src + deps
+    working_dir: /src
+    entrypoint: ["go", "run", "./cmd/seed-e2e"]
+    environment:
+      DATABASE_URL: postgres://ielts88:ielts88@postgres:5432/ielts88?sslmode=disable
+      JWT_SECRET: test-secret-e2e
+    depends_on:
+      postgres:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+      minio-init:
+        condition: service_completed_successfully
+    restart: "no"          # one-shot
+
+  api:
+    build:
+      context: ../ielts-smart-backend
+      dockerfile: Dockerfile
+      target: api
+    ports:
+      - "8080:8080"
+    environment:
+      APP_ENV: dev
+      HTTP_ADDR: ":8080"
+      DATABASE_URL: postgres://ielts88:ielts88@postgres:5432/ielts88?sslmode=disable
+      JWT_SECRET: test-secret-e2e
+      JWT_ACCESS_TTL: 30m
+      JWT_REFRESH_TTL: 720h
+      # E2E tests reuse one saved storageState (refresh token) across many tests;
+      # a wide grace window lets the rotated-token grace path absorb those reuses
+      # instead of tripping reuse-detection (family-kill → refresh 401 → /login).
+      SESSION_GRACE_WINDOW: 24h
+      # Storage
+      STORAGE_ENDPOINT: http://minio:9000          # internal stat/sign
+      STORAGE_PUBLIC_URL: http://localhost:9110     # host-facing; browser PUT + presign host
+      STORAGE_ACCESS_KEY: minioadmin
+      STORAGE_SECRET_KEY: minioadmin
+      STORAGE_BUCKET: ielts88
+      STORAGE_USE_SSL: "false"
+      # Fake SpeechSuper (api side only mints presigns / reads config; worker scores)
+      SCORING_VIA_SSPROXY: "true"
+      SSPROXY_BASE_URL: http://fake-ssproxy:5555
+      SSPROXY_ROUTER_TOKEN: test-router-token
+      SSPROXY_WEBHOOK_SECRET: test-webhook-secret
+      SSPROXY_WEBHOOK_URL: http://worker:8082/ss-proxy/webhook
+      SSPROXY_DEFAULT_TYPE: unlimited_priority
+      SSPROXY_PRESIGN_TTL: 30m
+      SPEECHSUPER_ENABLED: "false"
+      # Fake OpenAI
+      OPENAI_BASE_URL: http://fake-openai:6000/v1
+      OPENAI_API_KEY: test-key
+      OPENAI_MODEL: gpt-test
+      OPENAI_REQUEST_TIMEOUT: 2m
+      LLM_ENABLED: "true"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+      minio-init:
+        condition: service_completed_successfully
+
+  worker:
+    build:
+      context: ../ielts-smart-backend
+      dockerfile: Dockerfile.worker
+      target: worker
+    # internal-only :8082 (webhook receiver) — not published to host
+    extra_hosts:
+      - "localhost:host-gateway"   # see top-of-file presign note
+    environment:
+      APP_ENV: dev
+      DATABASE_URL: postgres://ielts88:ielts88@postgres:5432/ielts88?sslmode=disable
+      JWT_SECRET: test-secret-e2e
+      WORKER_INTERNAL_ADDR: ":8082"
+      # Storage
+      STORAGE_ENDPOINT: http://minio:9000
+      STORAGE_PUBLIC_URL: http://localhost:9110
+      STORAGE_ACCESS_KEY: minioadmin
+      STORAGE_SECRET_KEY: minioadmin
+      STORAGE_BUCKET: ielts88
+      STORAGE_USE_SSL: "false"
+      # Fake SpeechSuper
+      SCORING_VIA_SSPROXY: "true"
+      SSPROXY_BASE_URL: http://fake-ssproxy:5555
+      SSPROXY_ROUTER_TOKEN: test-router-token
+      SSPROXY_WEBHOOK_SECRET: test-webhook-secret
+      SSPROXY_WEBHOOK_URL: http://worker:8082/ss-proxy/webhook
+      SSPROXY_DEFAULT_TYPE: unlimited_priority
+      SSPROXY_PRESIGN_TTL: 30m
+      SPEECHSUPER_ENABLED: "false"
+      # Fake OpenAI
+      OPENAI_BASE_URL: http://fake-openai:6000/v1
+      OPENAI_API_KEY: test-key
+      OPENAI_MODEL: gpt-test
+      OPENAI_REQUEST_TIMEOUT: 2m
+      LLM_ENABLED: "true"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+      minio-init:
+        condition: service_completed_successfully
+      fake-ssproxy:
+        condition: service_started
+      fake-openai:
+        condition: service_started
+
+  fake-ssproxy:
+    build:
+      context: ./tests/fakes
+      dockerfile: ssproxy/Dockerfile
+    ports:
+      - "5555:5555"
+    environment:
+      PORT: "5555"
+      SSPROXY_WEBHOOK_SECRET: test-webhook-secret   # MUST match worker's secret
+    extra_hosts:
+      - "localhost:host-gateway"   # defense-in-depth: in case it ever fetches presigned audio
+
+  fake-openai:
+    build:
+      context: ./tests/fakes
+      dockerfile: openai/Dockerfile
+    ports:
+      - "6000:6000"
+    environment:
+      PORT: "6000"
+      FIXTURES_DIR: /app/fixtures

@@ -1,0 +1,67 @@
+{
+  "overall_band": 9.0,
+  "overall_feedback": "Bài nói truyền đạt được ý chính nhưng còn ngập ngừng và lỗi ngữ pháp lặp lại.",
+  "criteria": {
+    "FC": {
+      "code": "FC",
+      "name": "Fluency and Coherence",
+      "band": 5,
+      "comment": "Duy trì được câu trả lời nhưng còn ngập ngừng.",
+      "strength": "Nối ý được bằng các liên từ cơ bản.",
+      "weakness": "Còn lặp từ và dừng giữa câu."
+    },
+    "LR": {
+      "code": "LR",
+      "name": "Lexical Resource",
+      "band": 6,
+      "comment": "Từ vựng đủ cho chủ đề quen thuộc.",
+      "strength": "Dùng đúng một số cụm theo chủ đề.",
+      "weakness": "Ít cách diễn đạt thay thế."
+    },
+    "GRA": {
+      "code": "GRA",
+      "name": "Grammatical Range and Accuracy",
+      "band": 5,
+      "comment": "Câu đơn là chủ yếu, lỗi chia động từ lặp lại.",
+      "strength": "Có thử dùng câu ghép với because.",
+      "weakness": "Sai hoà hợp chủ ngữ - động từ."
+    },
+    "PRON": {
+      "code": "PRON",
+      "name": "Pronunciation",
+      "band": 5,
+      "comment": "Không có phép đo âm vị trực tiếp nên chỉ đánh giá thận trọng.",
+      "strength": "Phần lớn nội dung nhận diện được.",
+      "weakness": "Tốc độ và chỗ ngắt chưa ổn định."
+    }
+  },
+  "errors": [
+    {
+      "sequence": 1,
+      "part_label": "KHONG PHAI PART THAT",
+      "question": "CAU HOI SAI DE KIEM TRA LOP VALIDATE",
+      "original_answer": "CAU TRA LOI BIA DAT KHONG CO TRONG PAYLOAD",
+      "improved_answer": "I really enjoy reading books in my free time.",
+      "errors": [
+        {
+          "error_part": "I uh really enjoy",
+          "criterion_code": "FC",
+          "error_type": "Hesitation",
+          "explanation": "Từ đệm chen giữa chủ ngữ và động từ làm ngắt mạch câu.",
+          "correction": "I really enjoy"
+        }
+      ]
+    }
+  ],
+  "confidence": {
+    "raw_score": 3.9,
+    "threshold": 8.5,
+    "speaking_evidence": { "score": 9 },
+    "stability": { "score": 0 },
+    "outlier_subscore": { "score": 7 },
+    "recommendation": {
+      "gate_status": "Fail",
+      "message": "GIA TRI SAI DE KIEM TRA LOP VALIDATE"
+    }
+  }
+}

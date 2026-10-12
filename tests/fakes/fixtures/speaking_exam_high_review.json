@@ -1,0 +1,190 @@
+{
+  "errors": [
+    {
+      "errors": [
+        {
+          "correction": "Trả lời trực tiếp vào câu hỏi trước, ví dụ: \"I am a student\" hoặc \"I work as a...\".",
+          "error_part": "Okay, we are trying this for a second time to test the ability to upload an MP3 file. Hopefully this will work.",
+          "error_type": "irrelevant response",
+          "explanation": "Câu trả lời không đi vào nội dung câu hỏi về công việc hoặc nghề nghiệp của em. Điều này ảnh hưởng trực tiếp đến tính phù hợp và mạch lạc của phần trả lời trong IELTS Speaking.",
+          "criterion_code": "FC",
+          "criterion_name": "Fluency and Coherence"
+        },
+        {
+          "correction": "Dùng từ vựng đúng chủ đề công việc hoặc học tập, ví dụ: \"I am currently studying...\" hoặc \"I work in...\".",
+          "error_part": "the ability to upload an MP3 file",
+          "error_type": "off-topic word choice",
+          "explanation": "Cụm từ này phù hợp với việc kiểm tra kỹ thuật hơn là chủ đề cá nhân quen thuộc trong IELTS Speaking. Điều này làm vốn từ vựng của em chưa được thể hiện đúng ngữ cảnh cần đánh giá.",
+          "criterion_code": "LR",
+          "criterion_name": "Lexical Resource"
+        }
+      ],
+      "question": "What do you do?",
+      "part_label": "Part 1",
+      "improved_answer": "I am a student at the moment, and I am focusing on my studies.",
+      "original_answer": "Okay, we are trying this for a second time to test the ability to upload an MP3 file. Hopefully this will work."
+    }
+  ],
+  "outlier": {
+    "band": 4.0,
+    "reason": "Bài làm chỉ có một câu trả lời ngắn và câu trả lời này không đúng trọng tâm câu hỏi, nên bằng chứng giao tiếp cho bài IELTS Speaking còn rất hạn chế.",
+    "is_outlier": true
+  },
+  "criteria": {
+    "FC": {
+      "band": 4.0,
+      "code": "FC",
+      "name": "Fluency and Coherence",
+      "issues": [
+        "Trả lời lệch câu hỏi.",
+        "Chưa phát triển ý.",
+        "Bài nói quá ngắn để thể hiện rõ khả năng liên kết ý."
+      ],
+      "comment": "Em nói với tốc độ tương đối đều và có câu hoàn chỉnh, nhưng câu trả lời không đi đúng trọng tâm câu hỏi nên tính mạch lạc theo nhiệm vụ còn yếu. Với lượng dữ liệu hiện có, tiêu chí này phù hợp band 4.",
+      "strengths": [
+        "Em duy trì được tốc độ nói khá ổn, không bị ngắt quãng quá nhiều.",
+        "Câu trả lời có độ liền mạch nhất định, không chỉ là các mảnh rời.",
+        "Em có thể tạo một lượt nói ngắn tương đối trôi chảy."
+      ],
+      "next_steps": [
+        "Luyện mẫu Part 1: trả lời trực tiếp + lý do ngắn.",
+        "Sau mỗi câu trả lời, tự thêm một câu bắt đầu bằng \"because\", \"currently\", hoặc \"usually\".",
+        "Luyện với 10 câu hỏi quen thuộc và giới hạn mỗi câu trả lời ở 2–3 câu rõ ý."
+      ],
+      "weaknesses": [
+        "Hiện tại, câu trả lời của em chưa đi đúng vào nội dung câu hỏi được hỏi. Điều này khiến phần thể hiện ý chưa được đánh giá là mạch lạc theo yêu cầu của bài nói. Ở các bài sau, em nên trả lời trực tiếp vào câu hỏi ngay ở câu đầu tiên.",
+        "Hiện tại, phần trả lời mới dừng ở một lượt nói ngắn và chưa phát triển thêm ý. Điều này khiến em chưa có đủ cơ hội thể hiện khả năng nối ý và mở rộng câu trả lời. Ở các bài sau, em nên thêm 1 lý do hoặc 1 thông tin bổ sung sau câu trả lời chính."
+      ]
+    },
+    "LR": {
+      "band": 4.0,
+      "code": "LR",
+      "name": "Lexical Resource",
+      "issues": [
+        "Từ vựng chưa bám đúng chủ đề câu hỏi.",
+        "Phạm vi từ vựng thể hiện còn hạn chế.",
+        "Chưa cho thấy khả năng diễn đạt linh hoạt cho chủ đề cá nhân quen thuộc."
+      ],
+      "comment": "Em dùng được một số từ cơ bản và có vài từ ngoài mức rất cơ bản như \"upload\" hoặc \"hopefully\", nhưng phần từ vựng thể hiện ra không phục vụ đúng câu hỏi IELTS và phạm vi sử dụng còn hẹp. Vì vậy tiêu chí này phù hợp band 4.",
+      "strengths": [
+        "Em có sử dụng được từ vựng thông dụng một cách khá tự nhiên trong ngữ cảnh của câu nói.",
+        "Có xuất hiện một vài từ không quá cơ bản như \"upload\" và \"hopefully\".",
+        "Người nghe vẫn có thể hiểu nghĩa bề mặt của câu em nói."
+      ],
+      "next_steps": [
+        "Học theo cụm cho chủ đề công việc: \"I am a student\", \"I work as...\", \"I am responsible for...\".",
+        "Luyện thay thế từ đơn giản bằng cụm tự nhiên hơn, ví dụ: \"currently studying\", \"full-time job\", \"part-time work\".",
+        "Mỗi ngày luyện 5 câu Part 1 với 3 từ/cụm từ chủ đề trong mỗi câu trả lời."
+      ],
+      "weaknesses": [
+        "Hiện tại, vốn từ em thể hiện ra chưa phục vụ đúng chủ đề câu hỏi về nghề nghiệp hoặc công việc. Điều này khiến phần trả lời chưa cho thấy khả năng dùng từ phù hợp theo ngữ cảnh IELTS Speaking. Ở các bài sau, em nên chuẩn bị sẵn nhóm từ về học tập, công việc, sở thích và thói quen hằng ngày.",
+        "Hiện tại, phạm vi từ vựng được dùng trong bài còn khá hẹp vì chỉ có một câu trả lời ngắn. Điều này khiến em chưa có đủ cơ hội thể hiện khả năng diễn đạt linh hoạt hơn. Ở các bài sau, em nên luyện trả lời với 2–3 cụm từ mở rộng cho mỗi chủ đề quen thuộc."
+      ]
+    },
+    "GRA": {
+      "band": 5.0,
+      "code": "GRA",
+      "name": "Grammatical Range and Accuracy",
+      "issues": [
+        "Phạm vi cấu trúc còn hẹp.",
+        "Dữ liệu quá ít để xác nhận khả năng dùng cấu trúc đa dạng.",
+        "Ngữ pháp ổn ở mức câu đơn nhưng chưa thể hiện rõ câu phức."
+      ],
+      "comment": "Trong phần nói ngắn này, em tạo được câu hoàn chỉnh và hầu như không có lỗi ngữ pháp rõ ràng trong bản chép. Tuy nhiên, phạm vi cấu trúc còn hẹp và dữ liệu quá ít để xác nhận mức cao hơn, nên tiêu chí này phù hợp band 5.",
+      "strengths": [
+        "Em tạo được câu đầy đủ chủ ngữ và động từ.",
+        "Trong phần transcript hiện có, không thấy lỗi ngữ pháp nổi bật ảnh hưởng đến hiểu nghĩa.",
+        "Câu nói tương đối kiểm soát được ở mức cơ bản."
+      ],
+      "next_steps": [
+        "Luyện trả lời bằng 2 câu: một câu trả lời trực tiếp, một câu giải thích dùng \"because\".",
+        "Ôn các mẫu: \"I am...\", \"I work as...\", \"I have been...\" ở mức phù hợp band 5–6.",
+        "Tự viết và nói lại 10 câu Part 1 với ít nhất 1 câu mở rộng trong mỗi đáp án."
+      ],
+      "weaknesses": [
+        "Hiện tại, phần ngữ pháp em thể hiện ra chủ yếu là cấu trúc đơn giản và còn quá ít mẫu câu để chứng minh sự đa dạng. Điều này khiến bài nói chưa thể hiện rõ khả năng dùng nhiều dạng câu khác nhau để lên band cao hơn. Ở các bài sau, em nên luyện thêm câu hiện tại đơn, hiện tại tiếp diễn và câu có \"because\".",
+        "Hiện tại, câu trả lời chưa phục vụ đúng câu hỏi nên dù ngữ pháp khá ổn, hiệu quả giao tiếp trong bài thi vẫn bị hạn chế. Điều này khiến điểm tổng thể chưa thể cao hơn. Ở các bài sau, em nên kết hợp ngữ pháp đúng với nội dung trả lời đúng trọng tâm."
+      ]
+    },
+    "PRON": {
+      "band": 5.0,
+      "code": "PRON",
+      "name": "Pronunciation",
+      "issues": [
+        "Độ rõ phát âm chưa đồng đều ở một số từ.",
+        "Chưa thể hiện nhiều về ngữ điệu và trọng âm câu do bài quá ngắn."
+      ],
+      "comment": "Phát âm nhìn chung đủ rõ để người nghe hiểu phần lớn nội dung, với nhiều từ được đọc khá ổn. Tuy vậy, vẫn có vài từ độ rõ chưa đều và dữ liệu hiện có còn ít, nên tiêu chí này phù hợp band 5.",
+      "strengths": [
+        "Người nghe nhìn chung có thể hiểu được câu em nói mà không cần cố gắng quá nhiều.",
+        "Nhiều từ trong câu có mức phát âm khá tốt theo dữ liệu hệ thống.",
+        "Tốc độ nói tự nhiên, hỗ trợ khả năng nghe hiểu."
+      ],
+      "next_steps": [
+        "Luyện đọc rõ các từ nhiều âm tiết như \"hopefully\", \"ability\", \"upload\".",
+        "Ghi âm câu trả lời ngắn và nghe lại để kiểm tra từ nào bị nuốt âm hoặc chưa rõ.",
+        "Luyện nhấn từ khóa trong câu, ví dụ: \"I am a student\" hoặc \"I work in marketing\"."
+      ],
+      "weaknesses": [
+        "Hiện tại, độ rõ của phát âm chưa đều ở tất cả các từ, ví dụ một vài từ như \"Hopefully\" hoặc \"MP3\" chưa thật sự ổn định. Điều này khiến độ rõ tổng thể chưa được duy trì tốt hơn để lên band cao hơn. Ở các bài sau, em nên luyện nhấn âm từ và đọc rõ các từ nhiều âm tiết.",
+        "Hiện tại, bài nói quá ngắn nên em chưa có đủ cơ hội thể hiện ngữ điệu và nhịp nói ở nhiều kiểu câu khác nhau. Điều này khiến việc đánh giá phát âm ở mức cao hơn còn hạn chế. Ở các bài sau, em nên luyện câu trả lời dài 2–3 câu để kiểm soát nhịp và trọng âm tốt hơn."
+      ]
+    }
+  },
+  "test_type": "IELTS Speaking",
+  "confidence": {
+    "label": "Medium",
+    "formula": "0.50×Speaking Evidence + 0.30×Stability + 0.20×Outlier",
+    "raw_score": 5.7,
+    "stability": {
+      "score": 5.0,
+      "description": "Không có dữ liệu chấm lặp 3 lần để kiểm tra độ ổn định. Điểm ổn định được giữ ở mức thấp-trung bình vì kết quả hiện tại chỉ dựa trên một lần chấm và lượng bằng chứng cũng ít."
+    },
+    "threshold": 8.5,
+    "recommendation": {
+      "level": "Medium",
+      "message": "Gate Fail: Bài nói cần Admin chấm lại trước khi trả kết quả cho học viên.",
+      "gate_status": "Fail"
+    },
+    "outlier_subscore": {
+      "score": 5.0,
+      "description": "Đây là ca có rủi ro chấm lệch ở mức vừa vì câu trả lời không đúng câu hỏi và độ bao phủ bài thi rất thấp. Dù vậy, transcript và chỉ số phát âm không mâu thuẫn quá mạnh với nhau."
+    },
+    "speaking_evidence": {
+      "score": 6.0,
+      "description": "Có đủ âm thanh để chấm một phần ngắn, transcript khá dùng được và phát âm/tốc độ có dữ liệu hỗ trợ. Tuy nhiên, bài chỉ có 1 câu trả lời và câu trả lời lại lệch câu hỏi, nên bằng chứng để chấm toàn diện IELTS Speaking còn hạn chế."
+    }
+  },
+  "overall_band": 4.0,
+  "positive_bias": {
+    "bonus": 0.0,
+    "reason": null,
+    "applied": false,
+    "criteria": []
+  },
+  "clean_versions": [
+    {
+      "question": "What do you do?",
+      "part_label": "Part 1",
+      "clean_answer": "I am a student at the moment, and I spend most of my time studying."
+    }
+  ],
+  "schema_version": "v1",
+  "overall_feedback": {
+    "strengths": [
+      "Em đã nói khá trôi chảy về mặt tốc độ và phát âm nhìn chung vẫn đủ rõ để người nghe theo dõi được.",
+      "Điểm đáng ghi nhận là em tạo được câu hoàn chỉnh, không chỉ trả lời bằng từ đơn lẻ.",
+      "Em có cố gắng nói tự nhiên và liền mạch trong câu trả lời."
+    ],
+    "final_band": 4.0,
+    "next_steps": [
+      "Luyện phản xạ trả lời đúng trọng tâm bằng công thức 2 câu: \"Direct answer + one extra detail\".",
+      "Với câu hỏi Part 1 như \"What do you do?\", hãy luyện các mẫu: \"I am a...\", \"I work as...\", \"I am currently studying...\".",
+      "Ghi âm lại câu trả lời dài khoảng 15–20 giây cho mỗi câu hỏi Part 1 để tạo đủ bằng chứng ngôn ngữ hơn."
+    ],
+    "weaknesses": [
+      "Câu trả lời em đưa ra hiện chưa trả lời đúng nội dung câu hỏi \"What do you do?\". Điều này khiến giám khảo rất khó đánh giá đúng khả năng giao tiếp theo nhiệm vụ của bài IELTS Speaking. Ở các bài sau, em nên trả lời trực tiếp vào câu hỏi trước, ví dụ: \"I am a student\" hoặc \"I work as...\", rồi mới thêm 1 câu giải thích ngắn.",
+      "Bài làm hiện chỉ có 1 câu trả lời rất ngắn nên phạm vi ngôn ngữ thể hiện ra còn hạn chế. Điều này khiến em chưa có đủ cơ hội cho thấy vốn từ, ngữ pháp và khả năng phát triển ý để lên band cao hơn. Ở các bài sau, em nên cố gắng trả lời theo mẫu: ý chính + lý do + ví dụ ngắn."
+    ]
+  }
+}

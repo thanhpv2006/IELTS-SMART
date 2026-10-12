@@ -1,0 +1,37 @@
+name: ci
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # packages: read lets the default GITHUB_TOKEN pull the private
+    # @novaforge-team/ielts-exam-engine package from GitHub Packages
+    # (see .npmrc, which auths npm.pkg.github.com with ${GITHUB_TOKEN}).
+    permissions:
+      contents: read
+      packages: read
+    steps:
+      - uses: actions/checkout@v4
+
+      # No `version:` here — pnpm/action-setup reads it from the
+      # "packageManager" field in package.json (pnpm@10.32.1). Specifying both
+      # trips ERR_PNPM_BAD_PM_VERSION.
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+
+      - name: install
+        run: pnpm install --frozen-lockfile
+        # .npmrc expands ${GITHUB_TOKEN}; without it the private
+        # @novaforge-team scoped install 401s.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: build
+        run: pnpm build
+        env:
+          NEXT_PUBLIC_API_BASE: http://localhost:8080/api/v1

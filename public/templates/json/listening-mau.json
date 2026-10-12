@@ -1,0 +1,40 @@
+{
+  "audio_url": "https://s3.novaforge.vn/ielts-smart/fulltest/cam21/test1/listening.mp3",
+  "transcript": "<h2>PART 1 — Library membership</h2><p>Staff: Welcome to the library. Can I take your name? Student: Yes, it's Emma <span data-answer-q=\"1\">Turner</span>. Staff: And what's your student ID number? Student: It's <span data-answer-q=\"2\">4471</span>. Staff: And how long can you borrow a book for? Student: I was told <span data-answer-q=\"3\">two weeks</span>.</p>",
+  "groups": [
+    {
+      "type": "gap_fill",
+      "section": 1,
+      "title": "Questions 1–2",
+      "layout": "form",
+      "instructions_html": "<p><em>Complete the form below.</em></p><p><em>Write <strong>ONE WORD AND/OR A NUMBER</strong> for each answer.</em></p>",
+      "content_html": "<table><caption><h3>Library membership</h3></caption><tbody><tr><td><p><strong>Surname:</strong> <span data-blank=\"1\">1</span></p><p><strong>Student ID:</strong> <span data-blank=\"2\">2</span></p></td></tr></tbody></table>",
+      "items": [
+        {
+          "number": 1,
+          "answer_key": ["Turner"],
+          "explanation": "\"Yes, it's Emma Turner.\""
+        },
+        {
+          "number": 2,
+          "answer_key": ["4471"],
+          "explanation": "\"It's 4471.\""
+        }
+      ]
+    },
+    {
+      "type": "mcq_single",
+      "section": 2,
+      "instructions_html": "<p>Question 3</p><p>Choose the correct letter, <strong>A, B or C</strong>.</p>",
+      "items": [
+        {
+          "number": 3,
+          "prompt": "How long can a student borrow a book for?",
+          "options": ["A One week", "B Two weeks", "C One month"],
+          "answer_key": ["B"],
+          "explanation": "\"I was told two weeks.\""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+[
+  { "part": 1, "prompt": "<p>What is your full name?</p>" },
+  { "part": 1, "prompt": "<p>Do you work or are you a student?</p>" },
+  { "part": 1, "prompt": "<p>What do you like to do in your free time?</p>" },
+  { "part": 1, "prompt": "<p>Do you prefer spending time indoors or outdoors?</p>" },
+  {
+    "part": 2,
+    "prompt": "<p><strong>Describe a person who often helps others.</strong></p><p>You should say:</p><ul><li>who this person is</li><li>how you know this person</li><li>what kind of help this person gives</li></ul><p>and explain why you admire this person.</p>"
+  },
+  { "part": 3, "prompt": "<p>Why do some people enjoy helping others more than others do?</p>" },
+  { "part": 3, "prompt": "<p>What can communities do to encourage more volunteering?</p>" },
+  { "part": 3, "prompt": "<p>Do you think helping others should be taught in schools?</p>" },
+  { "part": 3, "prompt": "<p>How has technology changed the way people help each other?</p>" },
+  { "part": 3, "prompt": "<p>Is it more important for governments or individuals to help those in need?</p>" }
+]

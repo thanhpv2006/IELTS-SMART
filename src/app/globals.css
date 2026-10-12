@@ -1,0 +1,305 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design tokens — matching design/IELTS Smart Center.template.html
+ * Gray: Untitled UI scale. The brand ramp is applied by the root layout per
+ * request, based on the request host; brands are declared in src/brand/index.ts.
+ */
+:root {
+  --paper: #f9fafb;
+  --background: var(--paper);
+  --foreground: #101828;
+
+  --card: #ffffff;
+  --card-foreground: #101828;
+  --popover: #ffffff;
+  --popover-foreground: #101828;
+
+  --primary: var(--brand-500);
+  --primary-foreground: #ffffff;
+
+  --secondary: #f2f4f7;
+  --secondary-foreground: #344054;
+
+  --muted: #f9fafb;
+  --muted-foreground: #667085;
+
+  --accent: #f9fafb;
+  --accent-foreground: #101828;
+
+  --border: #eaecf0;
+  --input: #d0d5dd;
+  --ring: var(--brand-500);
+
+  --radius: 0.625rem;
+  --destructive: #d92d20;
+  --destructive-foreground: #ffffff;
+
+  /* src/brand/index.ts re-declares these on <html> per request, and an inline style outranks any
+     selector — so these `ieltssmart` values only apply where the root layout has not run. */
+  --brand-50:  #eff4ff;
+  --brand-100: #dce7ff;
+  --brand-200: #b2ccff;
+  --brand-300: #84adff;
+  --brand-400: #528bff;
+  --brand-500: #155eef;
+  --brand-600: #004eeb;
+  --brand-700: #0040c1;
+  --brand-800: #00359e;
+  --brand-900: #002c84;
+
+  --hw-blue:        #2563eb;
+  --hw-blue-hover:  #1d4ed8;
+  --hw-blue-border: #bfd3f8;
+  --hw-blue-bg:     #e8f0fe;
+  --hw-blue-sel:    #f0f5ff;
+  --hw-blue-row:    #f8faff;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-paper: var(--paper);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-brand-50:  var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+
+  /* Ink (gray) — Untitled UI */
+  --color-ink-25:  #fcfcfd;
+  --color-ink-50:  #f9fafb;
+  --color-ink-100: #f2f4f7;
+  --color-ink-200: #eaecf0;
+  --color-ink-300: #d0d5dd;
+  --color-ink-400: #98a2b3;
+  --color-ink-500: #667085;
+  --color-ink-600: #475467;
+  --color-ink-700: #344054;
+  --color-ink-800: #182230;
+  --color-ink-900: #101828;
+
+  /* Semantic tones — used by Badge (text / bg / border) */
+  --color-success-700: #067647;
+  --color-success-50:  #ecfdf3;
+  --color-success-200: #abefc6;
+
+  --color-warning-700: #b54708;
+  --color-warning-50:  #fffaeb;
+  --color-warning-200: #fedf89;
+
+  --color-error-700: #b42318;
+  --color-error-50:  #fef3f2;
+  --color-error-200: #fecdca;
+
+  --color-purple-700: #6941c6;
+  --color-purple-50:  #f4f3ff;
+  --color-purple-200: #d9d6fe;
+
+  --color-info-700: #175cd3;
+  --color-info-50:  #eff8ff;
+  --color-info-200: #b2ddff;
+
+  /* The "Bài tập" screen only — the customer signed off on the prototype's own hex
+     (design/IELTS SMART website design (1)), which is a few degrees off the brand palette above.
+     Deliberate: that screen matches its mockups, not its neighbours. */
+  --color-hw-blue:        var(--hw-blue);
+  --color-hw-blue-hover:  var(--hw-blue-hover);
+  --color-hw-blue-border: var(--hw-blue-border);
+  --color-hw-blue-bg:     var(--hw-blue-bg);
+  --color-hw-blue-sel:    var(--hw-blue-sel);
+  --color-hw-blue-row:    var(--hw-blue-row);
+
+  --color-hw-ink:   #111827;
+  --color-hw-ink-2: #374151;
+  --color-hw-ink-3: #6b7280;
+  --color-hw-ink-4: #8b93a1;
+  --color-hw-ink-5: #9ca3af;
+  --color-hw-ink-6: #b6bcc6;
+
+  --color-hw-line:    #eef0f4;
+  --color-hw-line-2:  #f3f4f6;
+  --color-hw-line-3:  #eceef2;
+  --color-hw-surface: #f9fafb;
+
+  --color-hw-green:        #0f8a4f;
+  --color-hw-green-bar:    #00a76f;
+  --color-hw-green-bg:     #dcf5e8;
+  --color-hw-green-border: #b5e3cb;
+
+  --color-hw-amber:        #d97706;
+  --color-hw-amber-bg:     #fff4e0;
+  --color-hw-amber-border: #f5ddb0;
+
+  --color-hw-red:        #dc2626;
+  --color-hw-red-bg:     #fdecec;
+  --color-hw-red-border: #f5c2c2;
+
+  --color-hw-purple:    #7c3aed;
+  --color-hw-purple-bg: #f3e8ff;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  html, body { @apply antialiased; }
+  body { @apply bg-background text-foreground font-sans; overflow-x: clip; }
+}
+
+.num { font-variant-numeric: tabular-nums; }
+
+/* R/L review — answer-location marks injected into backend-sanitized passage/transcript HTML. */
+.rl-highlight [data-answer-q] {
+  background: #fef3c7;
+  border-radius: 3px;
+  padding: 0 2px;
+  scroll-margin-top: 80px;
+}
+
+.rl-highlight [data-answer-q]::after {
+  content: "Q" attr(data-answer-q);
+  font-size: 0.625rem;
+  vertical-align: super;
+  margin-left: 2px;
+  color: #b45309;
+  font-weight: 700;
+}
+
+/* "Xem vị trí" briefly pulses the located mark so the eye catches where it scrolled to
+   (R7). The class is added on click and removed on animationend by objective-result-view. */
+@keyframes answer-flash {
+  0%,
+  100% {
+    background: #fef3c7;
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+  }
+  25% {
+    background: #fbbf24;
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.35);
+  }
+}
+
+.rl-highlight [data-answer-q].answer-flash,
+.rl-highlight p.answer-flash {
+  animation: answer-flash 1s ease-in-out;
+}
+
+/* Authoring editor — show the answer-span mark (RichTextEditor) while composing,
+   mirroring the review highlight. The mark renders <span class="answer-span"
+   data-answer-q="N">; backend sanitize strips the class, so this only affects
+   the editor, never the released review HTML. */
+.answer-span {
+  background: #fef3c7;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+.answer-span[data-answer-q]::after {
+  content: "Q" attr(data-answer-q);
+  font-size: 0.625rem;
+  vertical-align: super;
+  margin-left: 2px;
+  color: #b45309;
+  font-weight: 700;
+}
+
+/* Take view (R/L) — the engine renders the authored form-completion table as-is; backend
+   sanitize strips class/style, so the grid borders + title styling can only be applied here,
+   scoped to the take container. The question-number <sup> and <h3> title live in the authored
+   instructions_html. A completion frame (note, form…) that has its own card title uses <h3> for
+   subheadings, which stay left-aligned; older notes without one use a single <h3> as the title and keep it centred. */
+.rl-take table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.rl-take th,
+.rl-take td {
+  border: 1px solid #cbd5e1;
+  padding: 10px 12px;
+  vertical-align: top;
+  text-align: left;
+}
+.rl-take h3 {
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+}
+.rl-take [data-completion-layout]:has([data-completion-card-title]) h3 {
+  text-align: left;
+}
+.rl-take sup {
+  margin-right: 1px;
+  color: #4f46e5;
+  font-size: 0.72em;
+  font-weight: 700;
+}
+/* Note-completion (bullet) layout — Part 4 style: headings + bulleted lines with inline blanks.
+   Tailwind preflight resets list styling, so re-enable it here for authored notes. */
+.rl-take ul {
+  list-style: disc;
+  padding-left: 1.4em;
+  margin: 6px 0;
+}
+.rl-take ol {
+  list-style: decimal;
+  padding-left: 1.4em;
+  margin: 6px 0;
+}
+.rl-take li {
+  margin: 5px 0;
+}
+/* The engine's note chrome draws its own bullet before each item. */
+.rl-take [data-completion-layout="note"] ul {
+  list-style: none;
+}
+.rl-take p {
+  margin: 6px 0;
+}
+.rl-take h4 {
+  margin: 10px 0 4px;
+  font-weight: 700;
+  color: #1e293b;
+}
+/* Diagram/map images (diagram_label groups) — the engine ships `max-w-full` only, so a tall map
+   (e.g. the Listening Part 2 map) overflows the viewport. Cap the height so the whole figure fits
+   on screen; width auto-scales to preserve aspect ratio. */
+.rl-take img {
+  max-height: 52vh;
+  width: auto;
+  margin: 4px auto;
+  display: block;
+}

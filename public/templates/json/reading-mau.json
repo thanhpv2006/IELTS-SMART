@@ -1,0 +1,41 @@
+[
+  {
+    "part": 1,
+    "prompt": "<h2>The history of tea</h2><p><strong>A</strong> Tea has been consumed for thousands of years, first as a medicinal drink in ancient China before it became a daily habit.</p><p><strong>B</strong> By the seventeenth century, tea had reached Europe, where it was traded as a luxury good among the wealthy.</p><p><strong>C</strong> Today tea is the second most widely consumed drink in the world after water, grown commercially in more than thirty countries.</p>",
+    "passage_html_marked": "<h2>The history of tea</h2><p><strong>A</strong> Tea has been consumed for thousands of years, first as a medicinal drink in ancient China before <span data-answer-q=\"1\">it became a daily habit</span>.</p><p><strong>B</strong> By the seventeenth century, <span data-answer-q=\"2\">tea had reached Europe, where it was traded as a luxury good among the wealthy</span>.</p><p><strong>C</strong> Today tea is the second most widely consumed drink in the world after water, <span data-answer-q=\"3\">grown commercially in more than thirty countries</span>.</p>",
+    "groups": [
+      {
+        "type": "tfng",
+        "instructions_html": "<p>Questions 1–2</p><p>Do the following statements agree with the information given in the passage?</p><p>Write <strong>TRUE</strong>, <strong>FALSE</strong> or <strong>NOT GIVEN</strong>.</p>",
+        "shared_options": ["TRUE", "FALSE", "NOT GIVEN"],
+        "items": [
+          {
+            "number": 1,
+            "prompt": "Tea was first drunk in China for its medicinal properties.",
+            "answer_key": ["TRUE"],
+            "explanation": "Đoạn A: \"first as a medicinal drink in ancient China\"."
+          },
+          {
+            "number": 2,
+            "prompt": "Tea was cheaper than coffee in seventeenth-century Europe.",
+            "answer_key": ["NOT GIVEN"],
+            "explanation": "Bài không so sánh giá tea với cà phê."
+          }
+        ]
+      },
+      {
+        "type": "matching_info",
+        "instructions_html": "<p>Question 3</p><p>Which paragraph contains the following information?</p><p>Write the correct letter, <strong>A–C</strong>.</p>",
+        "shared_options": ["A", "B", "C"],
+        "items": [
+          {
+            "number": 3,
+            "prompt": "a reference to how many countries grow tea today",
+            "answer_key": ["C"],
+            "explanation": "Đoạn C: \"grown commercially in more than thirty countries\"."
+          }
+        ]
+      }
+    ]
+  }
+]

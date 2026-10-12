@@ -1,0 +1,301 @@
+{
+  "tasks": [
+    {
+      "errors": [
+        {
+          "errors": [
+            {
+              "correction": "I agree with the idea.",
+              "error_part": "a",
+              "error_type": "Sentence structure",
+              "explanation": "Từ này đứng một mình nên không tạo thành câu hoàn chỉnh. Một câu tiếng Anh cần có cấu trúc tối thiểu để truyền đạt ý nghĩa rõ ràng.",
+              "criterion_code": "GRA",
+              "criterion_name": "Grammatical Range and Accuracy"
+            },
+            {
+              "correction": "Viết ít nhất một câu thể hiện quan điểm liên quan trực tiếp đến đề bài.",
+              "error_part": "a",
+              "error_type": "Task relevance",
+              "explanation": "Nội dung này không đủ để trả lời đề bài vì không nêu quan điểm, không phát triển ý và không đáp ứng yêu cầu của một bài IELTS Writing Task 2.",
+              "criterion_code": "TA_TR",
+              "criterion_name": "Task Achievement / Task Response"
+            }
+          ],
+          "sentence_index": 1,
+          "original_sentence": "a",
+          "corrected_sentence": "I agree with the idea."
+        }
+      ],
+      "outlier": {
+        "band": 1.0,
+        "reason": "Bài viết chỉ có một từ, quá ngắn để hình thành câu trả lời có thể chấm điểm đầy đủ.",
+        "is_outlier": true
+      },
+      "criteria": {
+        "CC": {
+          "band": 1.0,
+          "code": "CC",
+          "name": "Coherence and Cohesion",
+          "issues": [
+            "Không có câu hoàn chỉnh.",
+            "Không có bố cục bài viết.",
+            "Không có từ nối hoặc phương tiện liên kết.",
+            "Không thể hiện tiến trình phát triển ý."
+          ],
+          "comment": "Bài viết chưa có cấu trúc câu, chưa có đoạn văn và cũng không có bất kỳ liên kết ý nào vì chỉ xuất hiện một từ “a”. Vì vậy, bài chưa thể hiện được tính mạch lạc hay khả năng tổ chức thông tin, phù hợp với band 1.",
+          "strengths": [
+            "Điểm gần nhất có thể ghi nhận là bài không chứa nhiều câu rời rạc hoặc ý lặp lại, vì toàn bộ phản hồi chỉ có một từ “a”, nên chưa phát sinh lỗi liên kết phức tạp hơn."
+          ],
+          "next_steps": [
+            "Để cải thiện, người học nên luyện viết theo bố cục cơ bản gồm mở bài, hai đoạn thân bài và kết luận, đồng thời dùng các từ nối đơn giản như Firstly, Moreover, However và In conclusion."
+          ],
+          "weaknesses": [
+            "Điểm yếu rõ nhất là không có câu hoàn chỉnh, không có đoạn văn và không có trình tự ý tưởng nào; ví dụ, từ “a” không thể hiện mở bài, thân bài hay kết luận."
+          ]
+        },
+        "LR": {
+          "band": 1.0,
+          "code": "LR",
+          "name": "Lexical Resource",
+          "issues": [
+            "Không đủ ngôn ngữ để đánh giá vốn từ.",
+            "Không có từ vựng theo chủ đề.",
+            "Không có cụm từ hay collocation.",
+            "Không có khả năng diễn đạt ý nghĩa."
+          ],
+          "comment": "Nguồn từ vựng hiện chưa thể đánh giá đầy đủ vì bài chỉ có một từ là “a”. Với lượng ngôn ngữ quá ít như vậy, bài chưa thể cho thấy khả năng lựa chọn từ phù hợp, diễn đạt ý nghĩa hay dùng từ theo ngữ cảnh, nên phù hợp với band 1.",
+          "strengths": [
+            "Điểm tích cực rất hạn chế là người viết đã sử dụng một đơn vị ngôn ngữ tiếng Anh cơ bản là “a”, cho thấy có nhận biết tối thiểu về hình thức từ ngữ trong tiếng Anh."
+          ],
+          "next_steps": [
+            "Ở các bài tiếp theo, người học nên chuẩn bị sẵn từ vựng theo chủ đề thường gặp trong IELTS như education, environment, technology và luyện viết câu hoàn chỉnh sử dụng các từ đó đúng ngữ cảnh."
+          ],
+          "weaknesses": [
+            "Điểm cần cải thiện là vốn từ không được thể hiện trong bài, vì chỉ có từ “a”; do đó không có bằng chứng về khả năng dùng từ theo chủ đề, kết hợp từ hay diễn đạt ý tưởng rõ ràng."
+          ]
+        },
+        "GRA": {
+          "band": 1.0,
+          "code": "GRA",
+          "name": "Grammatical Range and Accuracy",
+          "issues": [
+            "Không có câu hoàn chỉnh.",
+            "Không có cấu trúc ngữ pháp để đánh giá.",
+            "Không có sự đa dạng cấu trúc câu.",
+            "Không truyền tải được ý nghĩa bằng ngữ pháp."
+          ],
+          "comment": "Bài viết chưa có câu hoàn chỉnh nên không thể hiện được phạm vi hay độ chính xác ngữ pháp. Từ duy nhất “a” không tạo thành một mệnh đề có nghĩa, vì vậy chưa có bằng chứng ngữ pháp đủ để đạt mức cao hơn band 1.",
+          "strengths": [
+            "Điểm có thể ghi nhận ở mức tối thiểu là người viết đã sử dụng một thành tố ngữ pháp có thật trong tiếng Anh là mạo từ “a”, dù chưa đặt trong một câu hoàn chỉnh."
+          ],
+          "next_steps": [
+            "Để cải thiện, người học nên bắt đầu từ việc luyện viết các câu đơn đúng ngữ pháp với cấu trúc chủ ngữ, động từ và bổ ngữ, sau đó mới mở rộng sang câu ghép và câu phức."
+          ],
+          "weaknesses": [
+            "Điểm yếu chính là không có chủ ngữ, động từ hay cấu trúc câu; ví dụ, “a” không thể hiện được bất kỳ mẫu câu đơn giản nào như một câu khẳng định hoàn chỉnh."
+          ]
+        },
+        "TA_TR": {
+          "band": 1.0,
+          "code": "TA_TR",
+          "name": "Task Achievement / Task Response",
+          "issues": [
+            "Không có nội dung trả lời câu hỏi.",
+            "Không có lập trường hoặc ý kiến rõ ràng.",
+            "Không có phát triển ý hay ví dụ minh họa.",
+            "Độ dài quá ngắn để được chấm nội dung đầy đủ."
+          ],
+          "comment": "Bài viết hiện chưa hình thành một câu trả lời cho đề bài vì chỉ có một từ duy nhất là “a”, nên chưa thể hiện quan điểm, lập luận hay nội dung phát triển nào. Ở mức này, bài chưa đáp ứng được yêu cầu cơ bản của Task 2 nên phù hợp với band 1.",
+          "strengths": [
+            "Điểm tích cực duy nhất là người viết đã có một nỗ lực tối thiểu để nhập câu trả lời bằng tiếng Anh, cụ thể là xuất hiện từ “a”, cho thấy có bắt đầu phản hồi thay vì để trống hoàn toàn bài viết."
+          ],
+          "next_steps": [
+            "Ở các bài tiếp theo, người học nên viết ít nhất một đoạn mở bài nêu rõ quan điểm, sau đó phát triển hai ý chính có giải thích và ví dụ để hình thành một câu trả lời hoàn chỉnh."
+          ],
+          "weaknesses": [
+            "Điểm cần cải thiện rất lớn là bài chỉ gồm từ “a”, nên không trả lời bất kỳ phần nào của đề bài, không có quan điểm, không có ý chính và cũng không có ví dụ hỗ trợ."
+          ]
+        }
+      },
+      "task_type": "Task2",
+      "confidence": {
+        "label": "Low",
+        "formula": "0.5×Content + 0.3×Stability + 0.2×Outlier",
+        "raw_score": 0.0,
+        "threshold": 8.5,
+        "content_score": {
+          "score": 0.0,
+          "description": "Bài viết không đáp ứng được các yêu cầu nội dung cơ bản của Task 2 vì không có quan điểm, ý chính hay phần phát triển nào."
+        },
+        "outlier_score": {
+          "score": 0.0,
+          "description": "Bài thuộc trường hợp ngoại lệ rõ ràng vì độ dài quá ngắn và không có câu trả lời hoàn chỉnh."
+        },
+        "recommendation": {
+          "level": "Low",
+          "message": "Gate Fail: Độ tin cậy thấp, cần giáo viên chấm lại trước khi trả kết quả cho học viên.",
+          "gate_status": "Fail"
+        },
+        "stability_score": {
+          "score": 0.0,
+          "description": "Với bài chỉ gồm một từ, mọi cách đánh giá đều dẫn tới kết luận rất thấp và không có đủ dữ liệu ngôn ngữ để xác nhận độ ổn định chấm điểm."
+        }
+      },
+      "word_count": {
+        "missing": 249,
+        "detected": 1,
+        "required": 250,
+        "length_tier": "E",
+        "length_impact": "Bài viết chưa đạt yêu cầu độ dài nên tiêu chí Task Achievement hoặc Task Response bị giới hạn theo mức thiếu từ."
+      },
+      "clean_essay": "I agree with the idea.",
+      "overall_band": 1.0,
+      "positive_bias": {
+        "bonus": 0.0,
+        "reason": null,
+        "applied": false
+      },
+      "schema_version": "v1"
+    },
+    {
+      "errors": [],
+      "outlier": {
+        "band": null,
+        "reason": null,
+        "is_outlier": false
+      },
+      "criteria": {
+        "CC": {
+          "band": 8.0,
+          "code": "CC",
+          "name": "Coherence and Cohesion",
+          "issues": [
+            "Một số cách nối ý còn khá công thức, dù vẫn đúng và hiệu quả.",
+            "Có đoạn câu mở ý hơi dài, làm mật độ thông tin trong một câu tương đối cao."
+          ],
+          "comment": "Bài viết được tổ chức rất rõ ràng với bố cục mở bài, hai đoạn thân bài và kết luận hợp lý. Các ý nối với nhau mạch lạc, sử dụng từ nối tự nhiên và kiểm soát tốt tiến trình lập luận trong từng đoạn.",
+          "strengths": [
+            "Điểm mạnh là cấu trúc bài rất rõ, đặc biệt việc dùng “On the one hand” và “On the other hand” giúp phân chia hai phía của vấn đề một cách mạch lạc và dễ theo dõi.",
+            "Trong từng đoạn, người viết sắp xếp ý theo trình tự hợp lý từ luận điểm đến giải thích và kết quả, ví dụ cụm “First”, “Second”, “Therefore” tạo dòng triển khai khá tự nhiên và logic."
+          ],
+          "next_steps": [
+            "Ở các bài tiếp theo, nên luyện thêm nhiều cách liên kết linh hoạt như thay thế, quy chiếu, hoặc liên kết ngữ nghĩa để bài viết bớt phụ thuộc vào các từ nối quen thuộc.",
+            "Người học cũng nên rà soát độ dài câu mở đoạn và câu chuyển ý, vì việc chia câu hợp lý sẽ giúp lập luận rõ hơn và làm bài viết đọc tự nhiên hơn."
+          ],
+          "weaknesses": [
+            "Điểm cần cải thiện là một vài liên kết vẫn thiên về dạng học thuật quen thuộc, nên nếu đa dạng hơn cách chuyển ý giữa các câu và giữa các ý phụ thì bài sẽ tự nhiên hơn nữa.",
+            "Ở đoạn thân bài thứ hai, câu mở đoạn khá dài và chứa nhiều thông tin cùng lúc, vì vậy có thể tách hoặc điều tiết nhịp câu để lập luận trở nên sắc gọn hơn."
+          ]
+        },
+        "LR": {
+          "band": 8.0,
+          "code": "LR",
+          "name": "Lexical Resource",
+          "issues": [
+            "Có hiện tượng lặp lại một số từ khóa trung tâm của đề bài.",
+            "Mức độ đa dạng tốt nhưng chưa thật sự nổi bật đến mức rất xuất sắc."
+          ],
+          "comment": "Vốn từ vựng của bài khá phong phú và được sử dụng chính xác trong phần lớn trường hợp. Người viết dùng được nhiều cụm từ học thuật phù hợp với chủ đề, kiểm soát tốt sắc thái nghĩa và hầu như không có lỗi chọn từ đáng kể.",
+          "strengths": [
+            "Điểm mạnh là bài dùng nhiều từ vựng phù hợp và chính xác với chủ đề như “impressionable teenagers”, “destructive habits”, “distorted understanding of success”, và “core moral values”, cho thấy khả năng diễn đạt học thuật tốt.",
+            "Người viết cũng thể hiện khả năng kết hợp từ tự nhiên qua các cụm như “intensive training and dedication”, “productive hobbies”, và “measure success solely by financial status”, giúp lập luận rõ và thuyết phục hơn."
+          ],
+          "next_steps": [
+            "Để cải thiện, người học nên luyện thêm cách paraphrase các từ khóa lặp lại bằng các biến thể phù hợp như “public figures”, “adolescents”, “role models”, hoặc “popular icons” tùy ngữ cảnh.",
+            "Ở các bài tiếp theo, nên tiếp tục duy trì độ chính xác của từ vựng hiện có và thử mở rộng sang các cụm diễn đạt tinh tế hơn để tăng chiều sâu học thuật mà vẫn tự nhiên."
+          ],
+          "weaknesses": [
+            "Điểm cần cải thiện là dù từ vựng tốt, bài vẫn thiên về trường từ vựng quen thuộc của dạng opinion essay, nên chưa tạo được nhiều dấu ấn ngôn ngữ thật sự nổi bật ở mức band rất cao.",
+            "Một vài từ như “fame”, “success”, “young people”, và “celebrities” xuất hiện lặp lại nhiều lần; dù không gây khó hiểu, việc thay thế linh hoạt hơn sẽ giúp bài viết tinh tế hơn."
+          ]
+        },
+        "GRA": {
+          "band": 8.0,
+          "code": "GRA",
+          "name": "Grammatical Range and Accuracy",
+          "issues": [
+            "Mức chính xác cao nhưng độ đa dạng cấu trúc nâng cao còn có thể mở rộng thêm.",
+            "Một số câu dài có thể được điều chỉnh nhịp để tăng độ linh hoạt của văn phong."
+          ],
+          "comment": "Bài viết thể hiện khả năng sử dụng đa dạng cấu trúc câu với độ chính xác cao. Có sự kết hợp tốt giữa câu đơn, câu phức và mệnh đề quan hệ; lỗi ngữ pháp nếu có là rất ít và không ảnh hưởng đến độ rõ nghĩa.",
+          "strengths": [
+            "Điểm mạnh là người viết sử dụng câu phức khá linh hoạt, ví dụ “When young fans witness these achievements, they are often inspired to work harder toward their own ambitions” vừa đúng ngữ pháp vừa tự nhiên.",
+            "Bài cũng kiểm soát tốt các cấu trúc diễn đạt nguyên nhân và kết quả như “As a result” hay mệnh đề phụ với “Because”, giúp câu văn rõ nghĩa và có tính học thuật ổn định."
+          ],
+          "next_steps": [
+            "Ở các bài tiếp theo, người học nên luyện thêm các cấu trúc phức nâng cao nhưng vẫn tự nhiên, chẳng hạn câu chẻ, mệnh đề rút gọn, hoặc cấu trúc nhấn mạnh để mở rộng phạm vi ngữ pháp.",
+            "Để tăng chất lượng diễn đạt, nên kết hợp chủ động giữa câu ngắn và câu dài, nhằm tạo nhịp viết linh hoạt hơn mà vẫn duy trì độ chính xác ngữ pháp hiện tại."
+          ],
+          "weaknesses": [
+            "Điểm cần cải thiện là bài hiện ưu tiên độ an toàn và chính xác, nên số lượng cấu trúc thật sự đa dạng ở mức nâng cao hơn, chẳng hạn đảo ngữ hoặc cấu trúc nhấn mạnh, vẫn chưa nhiều.",
+            "Một vài câu khá dài và chứa nhiều mệnh đề, vì vậy nếu người viết chủ động thay đổi nhịp câu nhiều hơn thì văn phong sẽ linh hoạt hơn và tiến gần band cao hơn."
+          ]
+        },
+        "TA_TR": {
+          "band": 8.0,
+          "code": "TA_TR",
+          "name": "Task Achievement / Task Response",
+          "issues": [
+            "Ví dụ còn khá chung, chưa đủ cụ thể để tạo sức nặng tối đa cho lập luận.",
+            "Một số ý có thể được đào sâu thêm để đạt mức phát triển rất thuyết phục của band cao hơn."
+          ],
+          "comment": "Bài viết trả lời đúng yêu cầu đề bài, nêu rõ quan điểm ngay từ mở bài và duy trì lập trường nhất quán đến kết luận. Các ý chính được phát triển đầy đủ, có giải thích và ví dụ phù hợp, cho thấy khả năng xử lý đề bài ở mức cao.",
+          "strengths": [
+            "Điểm mạnh là bài viết xác định lập trường rất rõ ngay trong mở bài với ý kiến rằng đây “ultimately a negative development”, giúp người đọc nhận ra hướng tranh luận ngay từ đầu.",
+            "Bài viết đã phát triển được cả hai mặt của vấn đề khá cân đối, chẳng hạn đoạn thân bài đầu nêu lợi ích về động lực và thói quen tích cực, trong khi đoạn sau phân tích tác hại của việc bắt chước hành vi xấu."
+          ],
+          "next_steps": [
+            "Ở các bài tiếp theo, người học nên tiếp tục giữ cách nêu quan điểm rõ ràng từ đầu, đồng thời bổ sung ví dụ cụ thể hơn như một tình huống xã hội, hiện tượng phổ biến hoặc trường hợp giả định sát thực tế.",
+            "Để cải thiện lên band cao hơn, nên phát triển mỗi ý chính theo hướng giải thích nguyên nhân, hệ quả, và tác động dài hạn thay vì dừng lại ở mô tả hợp lý nhưng còn tương đối khái quát."
+          ],
+          "weaknesses": [
+            "Điểm cần cải thiện là ví dụ trong bài vẫn còn ở mức khái quát, ví dụ câu “even when a famous star is involved in a serious public scandal” chưa đưa ra minh họa cụ thể nên sức thuyết phục có thể chưa đạt mức cao nhất.",
+            "Mặc dù các ý đều phù hợp, phần phân tích về tác động tiêu cực đến giá trị đạo đức vẫn có thể được đào sâu thêm bằng cách giải thích rõ hơn cơ chế ảnh hưởng lâu dài đến hành vi hoặc lựa chọn sống của giới trẻ."
+          ]
+        }
+      },
+      "task_type": "Task2",
+      "confidence": {
+        "label": "High",
+        "formula": "0.5×Content + 0.3×Stability + 0.2×Outlier",
+        "raw_score": 9.5,
+        "threshold": 8.5,
+        "content_score": {
+          "score": 10.0,
+          "description": "Bài viết đáp ứng đầy đủ yêu cầu của Task 2: có quan điểm rõ ràng, thảo luận hai mặt của vấn đề, phát triển ý chính hợp lý và có kết luận nhất quán."
+        },
+        "outlier_score": {
+          "score": 10.0,
+          "description": "Bài viết không có dấu hiệu ngoại lệ: đúng chủ đề, đủ độ dài, có cấu trúc đầy đủ và ngôn ngữ hoàn toàn có thể chấm đáng tin cậy."
+        },
+        "recommendation": {
+          "level": "High",
+          "message": "Gate Pass: Kết quả đủ độ tin cậy để tự động trả điểm cho học viên.",
+          "gate_status": "Pass"
+        },
+        "stability_score": {
+          "score": 10.0,
+          "description": "Các dấu hiệu chấm điểm khá ổn định vì nội dung rõ ràng, lập trường nhất quán và chất lượng ngôn ngữ đồng đều giữa các đoạn, nên khả năng dao động band là rất thấp."
+        }
+      },
+      "word_count": {
+        "missing": 0,
+        "detected": 331,
+        "required": 250,
+        "length_tier": "A",
+        "length_impact": null
+      },
+      "clean_essay": "In recent years, it has become increasingly common for young people to look up to media and sports celebrities, even when these public figures do not act as positive role models. While this trend can sometimes motivate youth to achieve their goals, I believe it is ultimately a negative development because it can lead to the imitation of harmful behaviors.\n\nOn the one hand, admiring famous entertainers and athletes can have certain positive effects on young people. First, successful athletes, for instance, achieve international fame only after years of intensive training and dedication. When young fans witness these achievements, they are often inspired to work harder toward their own ambitions, which helps them develop a strong work ethic. Second, these celebrities play a major role in encouraging youth to participate in beneficial activities. Because sports stars and media figures make sports, music, and the creative arts highly popular, their audience is more likely to take up these pursuits. Therefore, more young people engage in productive hobbies, which significantly enhances their personal development.\n\nOn the other hand, I believe this is a negative trend for several reasons, one of which is that impressionable teenagers often copy the destructive habits of their idols. When celebrities engage in reckless actions, such as substance abuse, public aggression, or extreme materialism, young fans may view this behavior as acceptable or even trendy. For example, even when a famous star is involved in a serious public scandal, they often continue to receive massive attention and admiration from their followers. In addition, this obsession creates a distorted understanding of success and social values. Specifically, an excessive focus on fame and wealth can easily overshadow essential qualities like honesty, responsibility, and contributing to the community. As a result, young people begin to measure success solely by financial status, while important moral values receive less attention.\n\nIn conclusion, although admiring celebrities can motivate young people to work hard and adopt active hobbies, the tendency of young fans to imitate irresponsible behaviors and prioritize fame over core moral values shows that this phenomenon is ultimately a damaging development.",
+      "overall_band": 8.0,
+      "positive_bias": {
+        "bonus": 0.0,
+        "reason": null,
+        "applied": false
+      },
+      "schema_version": "v1"
+    }
+  ],
+  "multi_task": true,
+  "overall_band": 4.5,
+  "schema_version": "writing_multitask_v1"
+}

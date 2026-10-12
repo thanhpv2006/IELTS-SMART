@@ -1,0 +1,15 @@
+[
+  {
+    "part": 1,
+    "prompt": "<p>The chart below shows the percentage of households with internet access in three countries between 2005 and 2020.</p><p>Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</p><p>Write at least 150 words.</p>",
+    "task_type": "academic_task1",
+    "min_words": 150,
+    "image_url": "chart.png"
+  },
+  {
+    "part": 2,
+    "prompt": "<p>Some people think that the best way to reduce crime is to give longer prison sentences. Others believe there are more effective ways of reducing crime. Discuss both views and give your own opinion.</p><p>Write at least 250 words.</p>",
+    "task_type": "essay",
+    "min_words": 250
+  }
+]
